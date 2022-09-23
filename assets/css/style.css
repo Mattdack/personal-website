@@ -3,19 +3,19 @@
     box-sizing: border-box;
 }
 
-/* body {
-    height: 150%;
-} */
+body {
+    position: relative;
+}
 
 header {
     height: 50%;
     background-color: tan;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 header img {
-    margin-left: auto;
-    margin-right: auto;
     border: 2px solid #08401A;
     padding: 10px;
 }
@@ -23,8 +23,8 @@ header img {
 nav {
     background-color: #c1b674;
     display: flex;
-    justify-content: space-around;
-
+    position: sticky;
+    top: 0;
 }
 
 nav a{
@@ -34,8 +34,14 @@ nav a{
     flex-grow: 1;
 }
 
-@media screen and (max-width 768px) {
-    nav a{
+section {
+    height: 50%;
+    width: fit-content;
+    background-color: aquamarine;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
         flex-direction: column;
     }
 }
