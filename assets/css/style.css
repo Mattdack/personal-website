@@ -1,47 +1,131 @@
+:root {
+    --border-color: lightgrey;
+}
+
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
     box-sizing: border-box;
 }
 
-body {
-    position: relative;
-}
-
 header {
-    height: 50%;
-    background-color: tan;
-    text-align: center;
+    height: 25vh;
+    background: linear-gradient(0deg, white, 50%, cornflowerblue);
     display: flex;
-    justify-content: center;
-}
-
-header img {
-    border: 2px solid #08401A;
-    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav {
-    background-color: #c1b674;
+    background-color: white;
     display: flex;
     position: sticky;
     top: 0;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+}
+nav h1 {
+    font-size: 30px;
+    color: darkblue;
+    background-color: rgb(77, 131, 230);
+    border-radius: 7px;
 }
 
 nav a{
-    color: white;
-    padding: 14px 20px;
+    color: darkblue;
+    padding: 14px 7px;
     text-decoration: none;
     flex-grow: 1;
 }
 
-section {
-    height: 50%;
-    width: fit-content;
-    background-color: aquamarine;
+header img {
+    position: relative;
+    right: 75px;
+    max-height: 100%;
 }
+
+aside {
+    padding: 1% 1% 1% 7%;
+    margin: 0px 10px 0px;
+    background-color: #eef0eb;
+    text-align: right;
+    border-right: 4px solid var(--border-color);
+    height: 100%;
+}
+
+main {
+    background-color: #fcfcfc;
+    align-content: center;
+}
+
+main section p {
+    width: 50%;
+    margin: 1% 10%;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 2%;
+}
+
+main section aside {
+    width: 20%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-main {
+    margin: 3%;
+    padding: 1%;
+    border: 4px solid var(--border-color);
+    color: var(--accent-color-1);
+    background-color: white;
+}
+
+.portfolio-secondary {
+    margin: 3%;
+    padding: 1%;
+    border: 2px solid var(--border-color);
+    width: 50%;
+    color: var(--accent-color-1);
+    background-color: white;
+}
+
+.portfolio-header-style {
+    position: relative;
+    margin-top: -30px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+
+.align-flex-start {
+    align-self: flex-start
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    header img {
+        right: 0;
     }
 }
