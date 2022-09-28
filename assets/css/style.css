@@ -323,4 +323,7 @@ main section p {
     flex-direction: column;
     justify-content: center;
   }
+  h2 {
+    font-size: 90%;
+  }
 }
