@@ -10,77 +10,93 @@
 </head>
 
 <body>
+    <!-- Navigation bar and header mattdack -->
     <nav>
-        <h1>Matthew Dacanay</h1>
+        <h1>mattdack</h1>
         <section>
+        <a href="#Home">Home</a>   
         <a href="#About-Me">About Me</a>
         <a href="#Projects">Portfolio</a>
-        <a href="#Code-Composition">Code Composition</a>
         <a href="#Contact">Contact</a>
         </section>
     </nav>
-    <header>
-        <img src="https://placedog.net/600/400?random" alt="Random Dog">
+    <!-- Background Sunset and personal photo/introductory text on landing page -->
+    <header alt="Background Sunset" class="flex-row" id="Home">
+        <sub>
+            <p>Hello, my name is 
+            <p id="name">Matthew Dacanay.</p></p>
+            <p>I am an aspiring full stack developer.</p>
+        </sub>
+        <img src="./assets/images/Dacanay_Matthew .jpg" alt="Headshot photo of Matthew Dacanay.">
     </header>
 
     <div class="flex-row">
-    <main  class="flex-column">
+    <main  class="flex-column" id="About-Me">
         <!-- About Me -->
         <section class="flex-row">
-            <aside id="About-Me" class="align-flex-start"><h2>About Me</h2></aside>
+            <aside><h2>About Me</h2></aside>
+            <section class="flex-column">
+             <br>
             <p>
-            I am an aspiring full-stack software developer. Previously working as a research scientist, I have developed a passion for operationalizing projects and building pipelines to acquire and process data. I have a proven track record of a team-work oriented attitude, robust critical thinking, and motivation.
+                I am an aspiring full-stack software developer currently studying in the the University of Washington - Trilogy full time bootcamp.
             </p>
+            <br>
+            <p>
+                Previously working as a research scientist, I have developed a passion for operationalizing projects and building pipelines to acquire and process data. I have a proven track record of a team-work oriented attitude, robust critical thinking, and motivation to improve systems.
+            </p>
+            <br>
+            <p>
+                In addition to pursuing a career as a software developer. I am an avid hiker, board-game competitor, and video-game enthusiast,
+            </p>
+            </section>
         </section>
         <!-- Portfolio -->
         <section class="flex-row">
-            <aside class="align-flex-start"><h2 id="Projects">Projects</h2></aside>
-            <section>
+            <aside ><h2 id="Projects">Projects</h2></aside>
+            <section class="flex-column">
             <!-- Main Portfolio Item 1 -->
-                <sub class="portfolio-main flex-column">
-                    <h3 class="portfolio-header-style">Recent Code Refactoring</h3>
-                    <a href="mattdack.github.io/code-refactor">Horiseon Solutions</a>
-                    <img src="https://placedog.net/100/100?random" alt="Placeholder">
-                </sub>
+                <section id="porfolio-row-1">
+                    <div id="portfolio-main">
+                        <h3>Flexbox CSS Cheatsheet</h3>
+                        <sub>
+                            <a href="mattdack.github.io/flex-card-practice" target="_blank"><span class="clickable-card"></span></a>
+                        </sub>
+                    </div>
+                </section>
             <!-- Secondary Portfolio Items -->
-                <section class="flex-row">
-                    <sub class="portfolio-secondary flex-column">
-                        <h3 class="portfolio-header-style">Recent Code Refactoring</h3>
-                        <a href="mattdack.github.io/code-refactor">Horiseon Solutions</a>
-                        <img src="https://placedog.net/100/100?random" alt="Placeholder">
-                    </sub>
-                    <sub class="portfolio-secondary flex-column">
-                        <h3 class="portfolio-header-style">Recent Code Refactoring</h3>
-                        <a href="mattdack.github.io/code-refactor">Horiseon Solutions</a>
-                        <img src="https://placedog.net/100/100?random" alt="Placeholder">
-                    </sub>
+                <section id="portfolio-secondary-row">
+                    <div id="portfolio-secondary-1">
+                        <h3>Recent Code Refactoring</h3>
+                        <sub>
+                            <a href="mattdack.github.io/code-refactor" target="_blank"><span class="clickable-card"></span></a>
+                        </sub>
+                    </div>
+                    <div id="portfolio-secondary-2">
+                        <h3>Basic Web-Dev Study Guide</h3>
+                        <sub>
+                            <a href="mattdack.github.io/prework-study-guide" target="_blank"><span class="clickable-card"></span></a>
+                        </sub>
+                    </div>
                 </section>
             </section>
         </section>
-
-        <!-- Code Composition -->
-        <section class="flex-row">
-            <aside id= "Code-Composition" class="align-flex-start"><h2>Code Composition</h2></aside>
-            <!-- Bar Display -->
-            <sub>
-
+        </section>
+    <!-- Contact Section -->
+        <section id="Contact" class="flex-row">
+            <aside><h2 class="align-flex-start">Contact</h2></aside>
+            <!-- <h2 class="align-flex-start">Contact</h2> -->
+            <sub id="contact-info">
+                <p>805.210.0204</p>
+                <p>mattdack@uw.edu</p>
+                <a href="www.github.com/mattdack" target="_blank">Github </a>
             </sub>
         </section>
     </main>
     </div>
-    <!-- Contact Section -->
-
-    <footer id="Contact" class="flex-row">
-        <h2 class="align-flex-start">Contact</h2>
-        <p>805.210.0204</p>
-        <p>mattdack@uw.edu</p>
-        <a href="www.github.com/mattdack">Github</a>
-    </footer>
 </body>
 </html>
 
 <!-- Goals for personal webpage
 Build a graphic bar that represents the breakdown of the languages that I have been coding in. I think I can do this through the github api.
-Better styling for header with color gradient, etc.
 Build out the sections for the language composition, projects, and goals.
 -->

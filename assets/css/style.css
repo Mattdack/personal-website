@@ -1,131 +1,326 @@
 :root {
-    --border-color: lightgrey;
+  --border-color: lightgrey;
 }
 
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
-    box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Styles nav bar by pushing mattdack tag to far left, nav links to far right. */
+/* Once the screen scrolls, the nav bar will stick with position, sticky, top:0 and Z Index 5 */
+nav {
+  background-color: rgb(70, 67, 67);
+  display: flex;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  border-bottom: 2px solid white;
+}
+
+nav h1 {
+  font-size: 30px;
+  color: darkblue;
+  background-color: rgb(77, 131, 230);
+  border-radius: 7px;
+}
+
+nav h1:hover {
+  font-size: 35px;
+  color: rgb(186, 96, 96);
+  background-color: white;
+  border: 4px solid darkgrey;
+  border-radius: 4px;
+}
+
+nav a {
+  color: lightblue;
+  padding: 14px 7px;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+nav a:hover {
+  color: rgb(186, 96, 96);
+  background-color: white;
+  border-bottom: 4px solid darkgrey;
+  border-radius: 4px;
 }
 
 header {
-    height: 25vh;
-    background: linear-gradient(0deg, white, 50%, cornflowerblue);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://images.discerningassets.com/image/upload/c_fit,h_1000,w_1000/c_fit,fl_relative,h_1.0,o_100,w_1.0/ar_7250:5125,c_fill/c_crop,h_0.975609756097561,w_0.9655172413793104,x_0.017241379310344827,y_0.024390243902439025/v1514768001/bigislandsunset2_mt5j0r.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background: linear-gradient(0deg, white, 50%, cornflowerblue); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
 }
 
-nav {
-    background-color: white;
-    display: flex;
-    position: sticky;
-    top: 0;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    z-index: 5;
-}
-nav h1 {
-    font-size: 30px;
-    color: darkblue;
-    background-color: rgb(77, 131, 230);
-    border-radius: 7px;
+header sub {
+  background-color: rgb(77, 131, 230);
+  padding: 5 px;
+  border: 4px solid lightgrey;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-nav a{
-    color: darkblue;
-    padding: 14px 7px;
-    text-decoration: none;
-    flex-grow: 1;
+header p {
+  text-align: center;
+  font-size: 30px;
+  color: white;
 }
+
 
 header img {
-    position: relative;
-    right: 75px;
-    max-height: 100%;
+  height: 35vh;
+  width: 25vh;
+  border: 4px solid lightgrey;
+  border-radius: 50%;
 }
 
 aside {
-    padding: 1% 1% 1% 7%;
-    margin: 0px 10px 0px;
-    background-color: #eef0eb;
-    text-align: right;
-    border-right: 4px solid var(--border-color);
-    height: 100%;
+  padding: 1% 1% 1% 7%;
+  margin: 0px 10px 0px;
+  background-color: #eef0eb;
+  text-align: right;
+  border-right: 4px solid var(--border-color);
+  height: 100%;
+  width: 25vw;
+  flex-shrink: 0;
+  color: darkblue;
+}
+
+aside h2 {
+  padding-top: 2.5vh;
 }
 
 main {
-    background-color: #fcfcfc;
-    align-content: center;
-}
-
-main section p {
-    width: 50%;
-    margin: 1% 10%;
-    text-align: center;
+  background-color: #fcfcfc;
 }
 
 main section {
-    margin-bottom: 2%;
-}
+    margin: 0 2% 2% 2%;
+  }
 
-main section aside {
-    width: 20%;
+main section p {
+  text-align: center;
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.portfolio-main {
-    margin: 3%;
-    padding: 1%;
-    border: 4px solid var(--border-color);
-    color: var(--accent-color-1);
-    background-color: white;
+#portfolio-row-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* height: 50vh; */
 }
 
-.portfolio-secondary {
-    margin: 3%;
-    padding: 1%;
-    border: 2px solid var(--border-color);
-    width: 50%;
-    color: var(--accent-color-1);
-    background-color: white;
+#portfolio-main {
+  height: 50vh;
+  width: 60vw;
+  background-image: url("../images/CSS-Cheat-Sheet.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* flex-grow: 4; */
+  border: 4px solid var(--border-color);
+  border-radius: 10px;
+  background-color: (77, 131, 230);
+  position: relative;
 }
 
-.portfolio-header-style {
-    position: relative;
-    margin-top: -30px;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    background-color: white;
-    text-align: center;
+#portfolio-main h3 {
+  position: absolute;
+  left: -2px;
+  bottom: 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+  z-index: 2;
+  width: auto;
 }
 
-.align-flex-start {
-    align-self: flex-start
+.clickable-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
+#portfolio-secondary-1 {
+  height: 25vh;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58b46e0b5016e17d9344037b/1623160273783-SJO13E4WM50E1CMGRVQS/confroomrentalbanner.jpg?format=2500w");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  border: 4px solid var(--border-color);
+  border-radius: 10px;
+  background-color: (77, 131, 230);
+  position: relative;
+}
 
+#portfolio-secondary-1 h3 {
+  position: absolute;
+  left: -2px;
+  bottom: 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+  z-index: 2;
+  width: auto;
+}
 
+#portfolio-secondary-2 {
+  margin: 3%;
+  padding: 1%;
+  height: 25vh;
+  /* width: 50%; */
+  background-image: url("../images/Casual\ Photo\ -\ MD..jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  border: 4px solid var(--border-color);
+  border-radius: 10px;
+  background-color: (77, 131, 230);
+  position: relative;
+}
+
+#portfolio-secondary-2 h3 {
+  position: absolute;
+  left: -2px;
+  bottom: 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+  z-index: 2;
+  width: auto;
+}
+
+#portfolio-secondary-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  text-decoration: none;
+  font-size: large;
+}
+
+#contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  text-decoration: none;
+  font-size: large;
+}
+
+#portfolio-main:hover {
+  box-shadow: 10px 5px 5px darkgray;
+  color: lightblue;
+}
+
+#portfolio-secondary-1:hover {
+  box-shadow: 10px 5px 5px darkgray;
+  color: lightblue;
+}
+
+#portfolio-secondary-2:hover {
+  box-shadow: 10px 5px 5px darkgray;
+  color: lightblue;
+}
+
+#name {
+  color: darkblue;
+}
 
 @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    header {
-        flex-direction: column;
-        justify-content: center;
-    }
-    header img {
-        right: 0;
-    }
+  header sub {
+    padding: 3px;
+    border: 2px solid lightgrey;
+    border-radius: 7px;
+  }
+  
+  header p {
+    text-align: center;
+    font-size: 22.5px;
+    color: white;
+  }
+  
+  header sub a {
+    text-align: center;
+    font-size: 22.5px;
+    color: white;
+    background-color: rgb(186, 96, 96);
+    border: 3px solid lightgrey;
+  }
+  
+  header img {
+    height: 26.25vh;
+    width: 18.75vh;
+  }
+
+  #porfolio-main {
+    height: 25vh;
+  }
+
+  #portfolio-secondary-row {
+    flex-direction: column;
+  }
+
+  #portfolio-secondary-1{
+    width: 40vw;
+  }
+
+  #portfolio-secondary-2{
+    width: 40vw;
+  }
+
+  #contact-info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #contact-info p{
+    margin: 0 10%;
+  }
+
+  #contact-info a{
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
